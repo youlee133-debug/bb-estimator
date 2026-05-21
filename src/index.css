@@ -968,3 +968,173 @@ input[type="checkbox"] {
   height: 14px;
   cursor: pointer;
 }
+
+/* ── AI TAKEOFF ────────────────────────────────────────────────── */
+.takeoff-setup {
+  max-width: 640px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.setup-section { display: flex; flex-direction: column; gap: 10px; }
+
+.setup-heading {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.setup-desc { font-size: 13px; color: var(--text-3); }
+
+.api-key-row { display: flex; align-items: center; gap: 12px; }
+
+.api-key-input {
+  flex: 1;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  color: var(--text);
+  font-family: var(--mono);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.15s;
+}
+.api-key-input:focus { border-color: var(--accent); }
+
+.key-ok { font-size: 12px; color: var(--success); white-space: nowrap; }
+
+.upload-zone {
+  border: 1px dashed var(--border-strong);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  color: var(--text-3);
+  font-size: 13px;
+  transition: all 0.2s;
+  background: var(--surface);
+}
+.upload-zone:hover { border-color: var(--accent); background: var(--accent-dim); color: var(--text); }
+
+.upload-icon { font-size: 28px; opacity: 0.5; margin-bottom: 4px; }
+.upload-hint { font-size: 11px; color: var(--text-3); }
+
+.file-list { display: flex; flex-direction: column; gap: 8px; width: 100%; text-align: left; }
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--surface-2);
+  border-radius: var(--radius);
+  padding: 8px 12px;
+}
+.file-icon { font-size: 16px; }
+.file-name { flex: 1; font-size: 13px; color: var(--text); }
+.file-size { font-size: 11px; color: var(--text-3); font-family: var(--mono); }
+
+.error-msg {
+  background: var(--danger-dim);
+  border: 1px solid var(--danger);
+  border-radius: var(--radius);
+  padding: 10px 14px;
+  color: var(--danger);
+  font-size: 13px;
+}
+
+/* Analysing state */
+.analysing-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.analysing-spinner {
+  font-size: 48px;
+  color: var(--accent);
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.progress-bar {
+  width: 320px;
+  height: 4px;
+  background: var(--surface-2);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.progress-label { font-size: 12px; color: var(--text-3); font-family: var(--mono); }
+
+/* Review panel */
+.review-panel { display: flex; flex-direction: column; gap: 20px; }
+
+.review-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.review-title { font-size: 20px; font-weight: 600; }
+.review-sub { font-size: 13px; color: var(--text-3); margin-top: 4px; }
+.review-actions { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
+
+.confidence-legend {
+  display: flex;
+  gap: 20px;
+  font-size: 12px;
+  color: var(--text-3);
+}
+
+.review-body { display: flex; flex-direction: column; gap: 24px; }
+
+.conf-badge { font-size: 12px; white-space: nowrap; }
+.note-cell { font-size: 11px; color: var(--text-3); max-width: 200px; }
+
+/* Done state */
+.done-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.done-icon {
+  width: 64px;
+  height: 64px;
+  background: var(--success-dim);
+  color: var(--success);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+}
+
+.done-actions { display: flex; gap: 12px; margin-top: 8px; }
